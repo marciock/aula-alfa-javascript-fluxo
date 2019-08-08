@@ -15,7 +15,7 @@
      <div class="container">
         <h1>Hello, world!</h1>
 
-        <div class="alert alert-primary" role="alert" id="my-box">
+        <div class="alert " role="alert" id="my-box">
           
         </div>
 
@@ -39,25 +39,29 @@
         const btnGreen=document.getElementById('btn-green');
         const btnRed=document.getElementById('btn-red');
 
-      
-        let text='clique nos botões'
+      const textConfig=(text,classes)=>{
+        myBox.innerHTML=text;
+       
+        myBox.setAttribute('class',' ');
+        myBox.classList.add('alert',classes);
+
+      }
         
-      
-      
-     
+       
+      textConfig('Clique nos Botôes','alert-primary');
        
 
         btnRed.addEventListener('click', ()=>{
-        
-          })
+            textConfig('Ess é o vermelho','alert-danger');
+        })
 
 
         btnGreen.addEventListener('click', ()=>{
-         
+          textConfig('Esse é o Verde','alert-success')
           })
 
      
-        myBox.innerHTML= text; 
+       // myBox.innerHTML= text; 
        
      
        
